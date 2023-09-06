@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "CU DOXA" "\0"
+            VALUE "FileDescription", "Presto Stay" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "CU DOXA" "\0"
+            VALUE "InternalName", "Presto Stay" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
             VALUE "OriginalFilename", "text.exe" "\0"
-            VALUE "ProductName", "CU DOXA" "\0"
+            VALUE "ProductName", "Presto Stay" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

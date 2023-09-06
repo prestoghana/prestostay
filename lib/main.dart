@@ -1,24 +1,65 @@
 import 'package:flutter/material.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+import 'package:text/splash.dart';
+import 'package:text/newpage.dart';
 
-void main() =>runApp(const MyApp());
+
+GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
   
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      
+      title: "hello",
+      navigatorKey: navigatorKey, 
+      theme: ThemeData(fontFamily: 'Poppins',
+      primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,),
+      debugShowCheckedModeBanner: false,
+      
+      routes: {
+        // SplashScreen
+        "/": (context) => const SplashScreen(),
 
- 
-    @override
-    Widget build(BuildContext context) {
-      return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Scaffold(
-          body: WebView(initialUrl: "https://cudoxa.prestoghana.com/",
-          javascriptMode: JavascriptMode.unrestricted,
-          ),
-        ),
-      );
-    }
-    
-     }
-     
+        // mainpage:
+        "/newpage": (context) =>  Newpage(),
+        // ...
+         // mainpage:
+       
+        // ...
+      },
+    );
+  }
+}
+
+
+
+// void main() {
+//   runApp(MaterialApp(
+//     theme: ThemeData(fontFamily: 'Poppins'),
+//     debugShowCheckedModeBanner: false,
+//     routes: {
+//       // SplashScreen
+//       "/": (context) => const SplashScreen(),
+      
+//       // mainpage:
+//       "/newpage": (context) => const Newpage(),
+//       // "/intro": (context) => Intro(),
+
+//       // // Sign, Signup, Forgot Password
+//       // "/login": (context) => const Login(),
+//       // "/register": (context) => const Register(),
+//       // // "/registerS": (context) => const RegisterSecond(),
+//       // "/forgot": (context) => const Forgot(),
+
+//       // // Dashboard
+//       // "/navigator": (context) => const Navigator(),
+//       // "/dashboard": (context) => const Dashboard(),
+//     },
+//   ));
+// }
