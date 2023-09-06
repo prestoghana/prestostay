@@ -27,22 +27,26 @@ class _NewpageState extends State<Newpage> {
         
         body: Container(
           color: Colors.white,
-          padding: EdgeInsets.only(top: 20.0),
+          padding: EdgeInsets.only(top: 50.0),
           child: WebView(
             initialUrl: "https://stay.prestoghana.com/",
             javascriptMode: JavascriptMode.unrestricted,
             onWebViewCreated: (WebViewController webViewController) {
               controller = webViewController;
-              //  LinearProgressIndicator(
-              // color: Colors.red,
-              // backgroundColor: Colors.red,);
             },
+            onPageFinished:(Url){
+              controller.evaluateJavascript(
+                "document.getElementsbyTagName('body')[0].style.display='none';"
+              );
+            },
+            
             // Track loading progress
             onProgress: (progress) {
               setState(() {
                 this.progress = progress / 100;
               });
             },
+          
           ),
         ),
       ),
