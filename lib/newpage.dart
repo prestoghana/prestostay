@@ -37,6 +37,12 @@ class _NewpageState extends State<Newpage> {
               // color: Colors.red,
               // backgroundColor: Colors.red,);
             },
+            onPageFinished: (url) {
+               controller.evaluateJavascript(
+                "document.getElementsByTagName('nav')[0].style.display='none';");
+             
+            },
+
             // Track loading progress
             onProgress: (progress) {
               setState(() {
