@@ -5,7 +5,8 @@ import 'package:text/newpage.dart';
 
 GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
 
@@ -23,43 +24,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       
       routes: {
-        // SplashScreen
+      
         "/": (context) => const SplashScreen(),
 
-        // mainpage:
+
         "/newpage": (context) =>  Newpage(),
-        // ...
-         // mainpage:
        
-        // ...
       },
     );
   }
 }
 
 
-
-// void main() {
-//   runApp(MaterialApp(
-//     theme: ThemeData(fontFamily: 'Poppins'),
-//     debugShowCheckedModeBanner: false,
-//     routes: {
-//       // SplashScreen
-//       "/": (context) => const SplashScreen(),
-      
-//       // mainpage:
-//       "/newpage": (context) => const Newpage(),
-//       // "/intro": (context) => Intro(),
-
-//       // // Sign, Signup, Forgot Password
-//       // "/login": (context) => const Login(),
-//       // "/register": (context) => const Register(),
-//       // // "/registerS": (context) => const RegisterSecond(),
-//       // "/forgot": (context) => const Forgot(),
-
-//       // // Dashboard
-//       // "/navigator": (context) => const Navigator(),
-//       // "/dashboard": (context) => const Dashboard(),
-//     },
-//   ));
-// }
