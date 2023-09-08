@@ -12,6 +12,8 @@ class _NewpageState extends State<Newpage> {
   late WebViewController controller;
   double progress = 0.0; // Initialize progress variable
 
+
+
   @override
   Widget build(BuildContext context) {
     return WillPopScope(

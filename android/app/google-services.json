@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1022171004684",
+    "project_id": "stay-81324",
+    "storage_bucket": "stay-81324.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1022171004684:android:038c44a6d03b43ef595329",
+        "android_client_info": {
+          "package_name": "com.stay.prestoghana"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1022171004684-rnib5vg49qrq9f248smpu2a2oa91rgk6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFG9kYAewqnUYaNLBdmGajaUJCUeSHQD0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1022171004684-rnib5vg49qrq9f248smpu2a2oa91rgk6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
