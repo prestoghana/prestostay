@@ -38,19 +38,19 @@ class _SplashScreenState extends State<SplashScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              // Text(
-              //   // 'Presto Stay',
-              //   style: TextStyle(
-              //     color: Colors.blue,
+              Text(
+                'Presto Stay',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 19, 9, 214),
                             
-              //     fontSize: 30,
-              //     fontWeight: FontWeight.bold,
-              //   ),
-              // ),
-              SizedBox(height: 20),
-              CircularProgressIndicator(
-                color: Colors.blue,
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
+              // SizedBox(height: 20),
+              // CircularProgressIndicator(
+              //   color: Colors.blue,
+              // ),
             ],
           ),
         ),

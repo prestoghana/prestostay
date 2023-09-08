@@ -10,7 +10,7 @@ class Newpage extends StatefulWidget {
 
 class _NewpageState extends State<Newpage> {
   late WebViewController controller;
-  double progress = 0.0; // Initialize progress variable
+  double progress = 0.0; 
 
 
 
@@ -26,7 +26,7 @@ class _NewpageState extends State<Newpage> {
         }
       },
       child: Scaffold(
-        
+       
         body: Container(
           color: Colors.white,
           padding: EdgeInsets.only(top: 50.0),
@@ -39,10 +39,10 @@ class _NewpageState extends State<Newpage> {
             onPageFinished: (url) {
                controller.evaluateJavascript(
                 "document.getElementsByTagName('nav')[0].style.display='none';");
+             controller.evaluateJavascript(
+                "document.getElementsByTagName('hr')[0].style.display='none';");
              
             },
-
-            // Track loading progress
             onProgress: (progress) {
               setState(() {
                 this.progress = progress / 100;
