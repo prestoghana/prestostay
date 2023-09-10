@@ -12,7 +12,7 @@ class _NavpageState extends State<Navpage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("")
+        title: Text("Sasa")
       ),
       body: Container(
        child: Text("asas"),
