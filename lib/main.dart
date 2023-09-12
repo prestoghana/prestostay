@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:text/splash.dart';
 import 'package:text/newpage.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
+// import 'package:text/AnotherPage.dart'; 
 
 // Future<void> backroundHandler(RemoteMessage message) async {
 //   print(" This is message from background");
@@ -36,6 +35,9 @@ class MyApp extends StatelessWidget {
 
 
         "/newpage": (context) =>  Newpage(),
+// "/anotherpage": (context) => AnotherPage(),
+
+        
        
       },
     );
