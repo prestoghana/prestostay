@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:text/Nav.dart'; 
+import 'package:text/Navpage.dart'; 
 
 class Newpage extends StatefulWidget {
   Newpage({Key? key}) : super(key: key);
@@ -43,8 +43,8 @@ class _NewpageState extends State<Newpage> {
             onPageFinished: (url) {
                controller.evaluateJavascript(
                 "document.getElementsByTagName('nav')[0].style.display='none';");
-             controller.evaluateJavascript(
-                "document.getElementsByTagName('hr')[0].style.display='none';");
+            //  controller.evaluateJavascript(
+            //     "document.getElementsByTagName('hr')[0].style.display='none';");
              
             },
             onProgress: (progress) {
@@ -69,7 +69,7 @@ class _NewpageState extends State<Newpage> {
           ],
           color: Colors.white,
           buttonBackgroundColor: Colors.white,
-          backgroundColor: Color.fromARGB(255, 11, 60, 207),
+          backgroundColor: Color.fromARGB(255, 243, 244, 247),
           animationCurve: Curves.easeInOut,
           animationDuration: Duration(milliseconds: 600),
           onTap: (index) {
@@ -80,16 +80,17 @@ class _NewpageState extends State<Newpage> {
               case 1:
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Text("data")),
+                  MaterialPageRoute(builder: (context) => Navpage()),
                 );
                 break;
               case 2:
+              
                 // Handle the third item (Icon(Icons.perm_identity, size: 30))
                 // Navigate to NewPage2 when the third item is tapped
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Text("sa")),
-                );
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(builder: (context) => Text("sa")),
+                // );
                 break;
             }
           },
