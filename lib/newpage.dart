@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:text/Navpage.dart'; 
 
 class Newpage extends StatefulWidget {
   Newpage({Key? key}) : super(key: key);
@@ -11,7 +9,8 @@ class Newpage extends StatefulWidget {
 }
 
 class _NewpageState extends State<Newpage> {
-  
+  int currentIndex=0; 
+
   late WebViewController controller;
   double progress = 0.0; 
 
@@ -43,8 +42,8 @@ class _NewpageState extends State<Newpage> {
             onPageFinished: (url) {
                controller.evaluateJavascript(
                 "document.getElementsByTagName('nav')[0].style.display='none';");
-            //  controller.evaluateJavascript(
-            //     "document.getElementsByTagName('hr')[0].style.display='none';");
+             controller.evaluateJavascript(
+                "document.getElementsByTagName('hr')[0].style.display='none';");
              
             },
             onProgress: (progress) {
@@ -57,45 +56,41 @@ class _NewpageState extends State<Newpage> {
 
          
         ),
-          bottomNavigationBar: CurvedNavigationBar(
-          
-          index: 0,
-          height: 60.0,
-          items: <Widget>[
-            Icon(Icons.add, size: 30),
-            Icon(Icons.list, size: 30),
-          
-            Icon(Icons.perm_identity, size: 30),
-          ],
-          color: Colors.white,
-          buttonBackgroundColor: Colors.white,
-          backgroundColor: Color.fromARGB(255, 243, 244, 247),
-          animationCurve: Curves.easeInOut,
-          animationDuration: Duration(milliseconds: 600),
-          onTap: (index) {
-           switch (index) {
-              case 0:
-                // Handle the first item (Icon(Icons.add, size: 30))
-                break;
-              case 1:
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Navpage()),
-                );
-                break;
-              case 2:
-              
-                // Handle the third item (Icon(Icons.perm_identity, size: 30))
-                // Navigate to NewPage2 when the third item is tapped
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => Text("sa")),
-                // );
-                break;
-            }
-          },
-          letIndexChange: (index) => true,
-        ),
+         bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Color.fromARGB(255, 47, 78, 233),
+          selectedItemColor: Colors.white,
+          iconSize: 30,
+          // selectedFontSize: 10,
+          // unselectedFontSize: 10,
+          showUnselectedLabels: false,
+          type: BottomNavigationBarType.fixed,
+          currentIndex: currentIndex,
+          onTap: (index) => setState (() => currentIndex = index),
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon( 
+              Icons.home,
+            ),
+            label: 'home',
+            backgroundColor: Colors.red
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.message,
+            ),
+            label: 'chat',
+            backgroundColor: Colors.red
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.person,
+            ),
+            label: 'myprofile',
+            backgroundColor: Colors.red
+          ),
+        ],
+       
+      ),
 
          
       ),
