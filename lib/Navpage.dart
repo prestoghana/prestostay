@@ -15,7 +15,7 @@ class _NavpageState extends State<Navpage> {
         title: Text("")
       ),
       body: Container(
-       child: Text(""),
+       child: Text("asas"),
       ),
     );
   }

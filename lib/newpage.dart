@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-
+import 'Navpage.dart';
 class Newpage extends StatefulWidget {
   Newpage({Key? key}) : super(key: key);
 
@@ -10,6 +10,11 @@ class Newpage extends StatefulWidget {
 
 class _NewpageState extends State<Newpage> {
   int currentIndex=0; 
+  final screens =[
+    Container(child: Text("s"),),
+    Navpage(),
+    Container(child: Text("s"),),
+  ];
 
   late WebViewController controller;
   double progress = 0.0; 
@@ -51,7 +56,6 @@ class _NewpageState extends State<Newpage> {
                 this.progress = progress / 100;
               });
             },
-          
           ),
 
          
