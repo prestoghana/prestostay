@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:text/AnotherPage.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 // import 'Navpage.dart';
 
@@ -11,52 +12,138 @@ class Navpage extends StatefulWidget {
 }
 
 class _NavpageState extends State<Navpage> {
-  int currentIndex = 0; 
-  final screens = [
-    Center(child: Text("Home"),),
-    Center(child: Text("Profile"),),
-    Container( child: Text("try and see"),),
-  ];
 
   late WebViewController controller;
   double progress = 0.0; 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async {
-        if (await controller.canGoBack()) {
-          controller.goBack();
-          return false;
-        } else {
-          return true;
-        } 
-      },
-      child: Scaffold(
-        body: Container(
-          
-          color: Colors.white,
-          padding: EdgeInsets.only(top: 50.0),
-          child: WebView(
-            initialUrl: "https://stay.prestoghana.com/",
-            javascriptMode: JavascriptMode.unrestricted,
-            onWebViewCreated: (WebViewController webViewController) {
-              controller = webViewController;
-            },
-            onPageFinished: (url) {
-               controller.evaluateJavascript(
-                "document.getElementsByTagName('nav')[0].style.display='none';");
-             controller.evaluateJavascript(
-                "document.getElementsByTagName('hr')[0].style.display='none';");
-             
-            },
-            onProgress: (progress) {
-              setState(() {
-                this.progress = progress / 100;
-              });
-            },
+    return Scaffold(
+      
+      appBar: AppBar(
+        backgroundColor:Color.fromARGB(255, 18, 6, 151),
+        title: Text("Presto Stay",
+        style:TextStyle(
+          fontWeight: FontWeight.bold,
+        ),),),
+        body: Stack(
+        children: [
+          Container(
+            padding: EdgeInsets.symmetric(
+              horizontal: 20,
+              vertical: 15,
+            ),
+            child: Column(
+              children: [
+                Expanded(
+                  child: ListView(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(
+                          top: 20,
+                          // bottom: 20,
+                        ),
+                        child: Text(
+                          'Presto Solutions',
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Color.fromARGB(255, 18, 6, 151),
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(
+                          bottom: 20,
+                        ),
+                        child: Text("Presto Stay",
+                       style: TextStyle(
+                            fontSize: 45,
+                            fontWeight: FontWeight.w800,
+                          ),),
+                          
+                          ),
+                      Container(
+                        child: Text("Your ultimate student accommodation solution! Streamline your search for the perfect place while focusing on your studies. From cozy studios to shared apartments, we've got you covered. Safety is our priority, as we carefully vet all landlords and properties. Join our vibrant student community and find your ideal home away from home with PrestoStay today!",
+                       style: TextStyle(
+                            fontSize: 15,
+                            color: Color.fromARGB(255, 80, 83, 86),
+                            fontWeight: FontWeight.w700,
+                          ),),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(
+                          top: 30,
+                        ),
+                        padding: EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 25, 22, 217),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => AnotherPage(),
+                              ),
+                            );
+                          },
+                          child: Center(
+                            child: Text(
+                              'I am paying for a place',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                      )
+
+                          
+
+
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
+        ]
         ),
-      ),
-      );  
+    );
+
+          
+          
+          // color: Colors.white,
+          // padding: EdgeInsets.only(top: 50.0),
+          // child: WebView(
+            
+          //   initialUrl: "https://stay.prestoghana.com/",
+          //   javascriptMode: JavascriptMode.unrestricted,
+          //   onWebViewCreated: (WebViewController webViewController) {
+          //     controller = webViewController;
+          //   },
+          //   onPageFinished: (url) {
+          //      controller.evaluateJavascript(
+          //       "document.getElementsByTagName('nav')[0].style.display='none';");
+          //    controller.evaluateJavascript(
+          //       "document.getElementsByTagName('hr')[0].style.display='none';");
+             
+          //     controller.evaluateJavascript(
+          //       "document.getElementsByTagName('button')[0].style.display='none';");
+             
+          //   },
+          //   onProgress: (progress) {
+          //     setState(() {
+          //       this.progress = progress / 100;
+          //     });
+          //   },
+
+            
+            
+          // ),
+          
+     
   }
 }

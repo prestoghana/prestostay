@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:text/splash.dart';
 import 'package:text/newpage.dart';
+import 'package:flutter/widgets.dart';
 // import 'package:text/navpage.dart'; 
 
 // Future<void> backroundHandler(RemoteMessage message) async {

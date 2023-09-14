@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:text/Navpage.dart';
+import 'AnotherPage.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class Newpage extends StatefulWidget {
@@ -13,8 +14,8 @@ class _NewpageState extends State<Newpage> {
   int currentIndex = 0;
   final screens = [
     Navpage(),
+    Center(child: Text("Map")),
     Center(child: Text("Profile")),
-    Center(child: Text("Settings")),
    
   ];
 
@@ -24,10 +25,10 @@ class _NewpageState extends State<Newpage> {
   @override
   Widget build(BuildContext context) => Scaffold(
         
-        body: screens[currentIndex], // Display the selected screen
+        body: screens[currentIndex],
         bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Color.fromARGB(255, 47, 78, 233),
-          selectedItemColor: Colors.white,
+          backgroundColor: Colors.white,
+          selectedItemColor: Color.fromARGB(255, 54, 72, 239),
           iconSize: 30,
           selectedFontSize: 10,
           type: BottomNavigationBarType.fixed,
@@ -43,16 +44,16 @@ class _NewpageState extends State<Newpage> {
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.person,
+                Icons.map,
               ),
-              label: 'Profile',
+              label: 'Map',
               backgroundColor: Colors.red,
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.settings,
+                Icons.person,
               ),
-              label: 'Settings',
+              label: 'Profile',
               backgroundColor: Colors.red,
             ),
           ],
