@@ -89,7 +89,7 @@ class _NavpageState extends State<Navpage> {
                           },
                           child: Center(
                             child: Text(
-                              'I am paying for a place',
+                      'Find Your Election!',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 18,
