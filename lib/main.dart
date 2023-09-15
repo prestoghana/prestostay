@@ -1,4 +1,6 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:text/api/firebase_api.dart';
 import 'package:text/splash.dart';
 import 'package:text/newpage.dart';
 import 'package:flutter/widgets.dart';
@@ -14,6 +16,8 @@ GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  await FirebaseApi().initNotifications();
   runApp(MyApp());
 }
 
