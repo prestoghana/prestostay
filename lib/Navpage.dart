@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:text/About.dart';
 import 'package:text/AnotherPage.dart';
+import 'package:text/Nominate.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+import 'package:flutter/widgets.dart';
 // import 'Navpage.dart';
 
 
@@ -73,6 +76,7 @@ class _NavpageState extends State<Navpage> {
                       Container(
                         margin: EdgeInsets.only(
                           top: 30,
+                          
                         ),
                         padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
@@ -83,13 +87,13 @@ class _NavpageState extends State<Navpage> {
                           onTap: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => AnotherPage(),
+                                builder: (context) => About(),
                               ),
                             );
                           },
                           child: Center(
                             child: Text(
-                      'Find Your Election!',
+                      'I am paying for a place',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 18,
@@ -99,6 +103,10 @@ class _NavpageState extends State<Navpage> {
                           ),
                         ),
                       ),
+
+                       
+            Image.asset('assets/hero.png',
+            ),
 
 
                       Container(

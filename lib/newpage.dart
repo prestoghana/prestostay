@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:text/Find.dart';
 import 'package:text/Navpage.dart';
 import 'AnotherPage.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+import 'About.dart';
 
 class Newpage extends StatefulWidget {
   Newpage({Key? key}) : super(key: key);
@@ -14,8 +16,10 @@ class _NewpageState extends State<Newpage> {
   int currentIndex = 0;
   final screens = [
     Navpage(),
-    Center(child: Text("Map")),
-    Center(child: Text("Profile")),
+    Find(),
+    AnotherPage(),
+    About(),
+    
    
   ];
 
@@ -37,26 +41,36 @@ class _NewpageState extends State<Newpage> {
           items: [
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.home,
+                Icons.home_filled,
               ),
               label: 'Home',
               backgroundColor: Colors.red,
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.map,
+                Icons.map_rounded,
               ),
               label: 'Map',
               backgroundColor: Colors.red,
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.person,
+                Icons.search_rounded,
+              ),
+              label: 'Search',
+              backgroundColor: Colors.red,
+            ),
+            
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.person_2_sharp,
               ),
               label: 'Profile',
               backgroundColor: Colors.red,
             ),
           ],
         ),
+
+        
       );
 }

@@ -44,7 +44,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   color: Color.fromARGB(255, 19, 9, 214),
                             
                   fontSize: 40,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w900,
                 ),
               ),
               // SizedBox(height: 20),
