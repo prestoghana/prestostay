@@ -104,6 +104,45 @@ class _NavpageState extends State<Navpage> {
                         ),
                       ),
 
+                      Container(
+                        margin: EdgeInsets.only(
+                          top: 10,
+                          
+                        ),
+                        padding: EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 250, 250, 251),
+                          borderRadius: BorderRadius.circular(8),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 1,
+                              blurRadius: 1,
+                              offset: Offset(0,3),
+                            ),
+                          ]
+                        ),
+                        child: GestureDetector(
+                          onTap: () {
+                            // Navigator.of(context).push(
+                            //   // MaterialPageRoute(
+                            //   //   builder: (context) => About(),
+                            //   // ),
+                            // );
+                          },
+                          child: Center(
+                            child: Text(
+                      'Make Enquirers',
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 16, 13, 208),
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+
                        
             Image.asset('assets/hero.png',
             ),
