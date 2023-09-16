@@ -52,7 +52,7 @@ class _NavpageState extends State<Navpage> {
                             fontFamily: "PlusJakartaSans",
                             fontSize: 20,
                             color: Color.fromARGB(255, 18, 6, 151),
-                            fontWeight: FontWeight.w700,
+                            // fontWeight: FontWeight.w700,
                           ),
                         ),
                       ),
@@ -65,7 +65,7 @@ class _NavpageState extends State<Navpage> {
                        style: TextStyle(
                         fontFamily: "PlusJakartaSans",
                             fontSize: 45,
-                            fontWeight: FontWeight.w800,
+                            // fontWeight: FontWeight.w800,
                           ),),
                           
                           ),
@@ -75,7 +75,7 @@ class _NavpageState extends State<Navpage> {
                         fontFamily: "PlusJakartaSans",
                             fontSize: 15,
                             color: Color.fromARGB(255, 80, 83, 86),
-                            fontWeight: FontWeight.w700,
+                            // fontWeight: FontWeight.w100,
                           ),),
                       ),
                       Container(
@@ -103,7 +103,7 @@ class _NavpageState extends State<Navpage> {
                                 fontFamily: "PlusJakartaSans",
                                 color: Colors.white,
                                 fontSize: 18,
-                                fontWeight: FontWeight.bold,
+                                // fontWeight: FontWeight.bold,
                               ),
                             ),
                           ),
