@@ -38,7 +38,10 @@ class _AnotherPageState extends State<AnotherPage> {
     icon: Icon(Icons.arrow_back),
   ),
   backgroundColor: Color.fromARGB(255, 18, 6, 151),
-  title: Text("Find A Hostel"),
+  title: Text("Find A Hostel",
+  style: TextStyle(
+    fontFamily: "PlusJakartaSans",
+  ),),
   actions: [], 
 ),
 

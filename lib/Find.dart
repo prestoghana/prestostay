@@ -29,7 +29,11 @@ class _FindState extends State<Find> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Color.fromARGB(255, 18, 6, 151),
-          title: Text("Maps"),
+          title: Text("Maps", 
+          style: TextStyle(
+            fontFamily: "PlusJakartaSans",
+          ),),
+          
         ),
         body: Container(
           color: Colors.white,

@@ -30,6 +30,7 @@ class _NewpageState extends State<Newpage> {
   Widget build(BuildContext context) => Scaffold(
         
         body: screens[currentIndex],
+        
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.white,
           selectedItemColor: Color.fromARGB(255, 54, 72, 239),

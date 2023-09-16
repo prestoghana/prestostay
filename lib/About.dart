@@ -29,7 +29,10 @@ class _AboutState extends State<About> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Color.fromARGB(255, 18, 6, 151),
-          title: Text("My Profile"),
+          title: Text("My Profile",
+          style: TextStyle(
+            fontFamily: "PlusJakartaSans",
+          ),),
         ),
         body: Container(
           color: Colors.white,

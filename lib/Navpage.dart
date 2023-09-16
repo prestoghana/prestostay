@@ -27,6 +27,7 @@ class _NavpageState extends State<Navpage> {
         title: Text("Presto Stay",
         style:TextStyle(
           fontWeight: FontWeight.bold,
+          fontFamily: "PlusJakartaSans",
         ),),),
         body: Stack(
         children: [
@@ -48,6 +49,7 @@ class _NavpageState extends State<Navpage> {
                         child: Text(
                           'Presto Solutions',
                           style: TextStyle(
+                            fontFamily: "PlusJakartaSans",
                             fontSize: 20,
                             color: Color.fromARGB(255, 18, 6, 151),
                             fontWeight: FontWeight.w700,
@@ -59,7 +61,9 @@ class _NavpageState extends State<Navpage> {
                           bottom: 20,
                         ),
                         child: Text("Presto Stay",
+                        
                        style: TextStyle(
+                        fontFamily: "PlusJakartaSans",
                             fontSize: 45,
                             fontWeight: FontWeight.w800,
                           ),),
@@ -68,6 +72,7 @@ class _NavpageState extends State<Navpage> {
                       Container(
                         child: Text("Your ultimate student accommodation solution! Streamline your search for the perfect place while focusing on your studies. From cozy studios to shared apartments, we've got you covered. Safety is our priority, as we carefully vet all landlords and properties. Join our vibrant student community and find your ideal home away from home with PrestoStay today!",
                        style: TextStyle(
+                        fontFamily: "PlusJakartaSans",
                             fontSize: 15,
                             color: Color.fromARGB(255, 80, 83, 86),
                             fontWeight: FontWeight.w700,
@@ -95,6 +100,7 @@ class _NavpageState extends State<Navpage> {
                             child: Text(
                       'I am paying for a place',
                               style: TextStyle(
+                                fontFamily: "PlusJakartaSans",
                                 color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
