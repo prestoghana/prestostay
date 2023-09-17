@@ -52,6 +52,9 @@ class _FindState extends State<Find> {
                   this.progress = progress / 100;
                 });
               },
+              // welcome to the new person to get to you to the new none, 
+              // thi s is me ytrinh ot gibr hhtm bets to you on a regurlaer 
+              // the new apple it here ,just now im here for initialCookies: [],
             ),
             if (progress < 1.0)
               Center(
