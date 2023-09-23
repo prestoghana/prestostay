@@ -22,6 +22,7 @@ class _NewpageState extends State<Newpage> {
     
    
   ];
+  
 
   late WebViewController controller;
   double progress = 0.0;

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:text/About.dart';
 import 'package:text/AnotherPage.dart';
 import 'package:text/Nominate.dart';
+import 'package:text/api/firebase_api.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:flutter/widgets.dart';
 // import 'Navpage.dart';
@@ -15,6 +16,11 @@ class Navpage extends StatefulWidget {
 }
 
 class _NavpageState extends State<Navpage> {
+  @override
+  void initState() {
+    super.initState();
+    FirebaseApi().initNotification();
+  }
 
   late WebViewController controller;
   double progress = 0.0; 
